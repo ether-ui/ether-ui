@@ -1,0 +1,36 @@
+{
+  "name": "ether-ui",
+  "version": "0.1.0",
+  "description": "Modern CSS UI Kit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production postcss src/index.css -o dist/ether-ui.css",
+    "dev": "postcss src/index.css -o dist/ether-ui.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ether-ui/ether-ui.git"
+  },
+  "keywords": [
+    "css",
+    "ui",
+    "kit",
+    "framework",
+    "components"
+  ],
+  "author": "Dejan Stosic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://www.etherui.com"
+  },
+  "homepage": "https://github.com/ether-ui/ether-ui#readme",
+  "devDependencies": {
+    "cssnano": "^5.1.13",
+    "postcss": "^8.4.17",
+    "postcss-cli": "^10.0.0",
+    "postcss-cssnext": "^3.1.1",
+    "postcss-import": "^15.0.0",
+    "postcss-nested": "^6.0.0"
+  }
+}
