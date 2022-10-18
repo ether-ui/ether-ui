@@ -1,0 +1,66 @@
+.input-group {
+  label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    padding-left: 1rem;
+    color: var(--slategray-900);
+    transition: color 0.3s;
+  }
+
+  input {
+    padding: 0 1rem;
+    border: 1px solid var(--slategray-200);
+    font-size: 0.875rem;
+    color: var(--slategray-900);
+    line-height: 3rem;
+    transition: border-color 0.3s, background 0.3s;
+
+    &:hover {
+      background: var(--slategray-50);
+    }
+
+    &::placeholder {
+      color: var(--slategray-500);
+    }
+  }
+
+  p {
+    margin: 0;
+    padding-left: 1rem;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: var(--slategray-500);
+  }
+
+  .has-icons {
+    position: relative;
+
+    input {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      transition: border-color 0.3s, color 0.3s;
+    }
+
+    .prepend-icon,
+    .append-icon {
+      position: absolute;
+      top: 0.75rem;
+    }
+
+    .prepend-icon {
+      left: 1rem;
+    }
+
+    .append-icon {
+      right: 1rem;
+    }
+  }
+}

@@ -1,9 +1,0 @@
-@import "reset.css";
-@import "grid.css";
-@import "colors.css";
-
-@import "forms/input.css";
-
-body {
-    font-family: 'Public Sans', sans-serif;
-}

@@ -1,5 +1,4 @@
-const fs = require("fs");
-const prettier = require("prettier");
+const writeToFile = require("../functions/writeToFile");
 
 /**
  * @param {EtherUIConfig} config
@@ -10,30 +9,39 @@ module.exports = function grid(config) {
     width: 100%;
 }
 
+.container {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
 }
 
-.gap-16 {
-    gap: 16px;
+.gap-1 {
+    gap: 1rem;
 }
 
-.gap-24 {
-    gap: 16px;
+.gap-1-5 {
+    gap: 1.5rem;
 }
 
-.gap-32 {
-    gap: 32px;
+.gap-2 {
+    gap: 2rem;
 }
 
-.gap-64 {
-    gap: 32px;
+.gap-3 {
+    gap: 3rem;
+}
+
+.gap-4 {
+    gap: 4rem;
 }
 
 .col {
     flex: 1 0 0;
-    background: red;
 }
 
 `;
@@ -55,13 +63,5 @@ module.exports = function grid(config) {
     }
   }
 
-  fs.writeFile(
-    "./src/grid.css",
-    prettier.format(output, { parser: "css" }),
-    (err) => {
-      if (err) {
-        console.error(err);
-      }
-    }
-  );
+  writeToFile("./src/grid.pcss", output);
 };
