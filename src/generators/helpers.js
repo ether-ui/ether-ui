@@ -6,6 +6,7 @@ module.exports = function helpers(config) {
 .rounded-min {border-radius: 0.25rem}
 .rounded-max {border-radius: 1.5rem}
 .font-bold {font-weight: 700}
+.cursor-pointer {cursor: pointer}
 `;
 
   for (let i = 0; i < 10; i++) {
@@ -23,7 +24,7 @@ module.exports = function helpers(config) {
 .m-${i} {margin: ${space}rem}    
 .ml-${i} {margin-left: ${space}rem}    
 .mr-${i} {margin-right: ${space}rem}    
-.mt-${i} {margin-top: ${space}rem}    
+.mt-${i} {margin-top: ${space}rem}      
 .mb-${i} {margin-bottom: ${space}rem}    
 .mx-${i} {margin-left: ${space}rem; margin-right: ${space}rem}    
 .my-${i} {margin-top: ${space}rem; margin-bottom: ${space}rem}  

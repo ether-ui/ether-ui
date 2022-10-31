@@ -23,7 +23,10 @@ module.exports = function colors(config) {
 .focus\\:border-${key}:focus {border-color: var(--${key}) !important}
 .focus\\:border-${key}:focus {border-color: var(--${key}) !important}
 .form-${key} {
-  input:focus {
+  input[type="checkbox"]:checked, input[type="radio"]:checked::before  {
+    background-color: var(--${key}) !important;
+  }
+  input:focus, textarea:focus, input[type="checkbox"]:checked, input[type="radio"]:checked {
     border-color: var(--${key}) !important;
   }
   &:focus-within {
