@@ -6,7 +6,24 @@ button.btn {
   font-size: 1rem;
   font-weight: 500;
   position: relative;
+  background: var(--neutral);
+  color: var(--neutral-content);
   transition: box-shadow 0.3s;
+
+  &.primary {
+    background: var(--primary);
+    color: var(--primary-content);
+  }
+
+  &.secondary {
+    background: var(--secondary);
+    color: var(--secondary-content);
+  }
+
+  &.tertiary {
+    background: var(--tertiary);
+    color: var(--tertiary-content);
+  }
 }
 
 button.btn:not([disabled]):hover {

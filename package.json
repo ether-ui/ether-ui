@@ -5,9 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "generate": "node ./index.js",
-    "build": "NODE_ENV=production postcss src/index.pcss -o dist/ether-ui.css",
-    "dev": "postcss src/index.pcss -o dist/ether-ui.css -w"
+    "build": "NODE_ENV=production node ./index.js",
+    "dev": "postcss src/index.pcss -o dist/ether-ui.dev.css -w",
+    "docs:build": "nuxt build",
+    "docs:dev": "nuxt dev",
+    "docs:generate": "nuxt generate",
+    "docs:preview": "nuxt preview",
+    "docs:postinstall": "nuxt prepare"
   },
   "repository": {
     "type": "git",
@@ -27,8 +31,10 @@
   },
   "homepage": "https://github.com/ether-ui/ether-ui#readme",
   "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "cssnano": "^5.1.13",
     "modern-normalize": "^1.1.0",
+    "nuxt": "3.0.0-rc.12",
     "postcss": "^8.4.17",
     "postcss-cli": "^10.0.0",
     "postcss-cssnext": "^3.1.1",
@@ -37,5 +43,9 @@
     "postcss-math": "^0.0.10",
     "postcss-nested": "^6.0.0",
     "prettier": "2.7.1"
+  },
+  "dependencies": {
+    "@fortawesome/free-regular-svg-icons": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0"
   }
 }

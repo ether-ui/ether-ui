@@ -37,7 +37,6 @@
     width: 100%;
   }
 
-
   select {
     appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
@@ -173,5 +172,59 @@
 
   input[type="radio"]:checked::before {
     transform: scale(1);
+  }
+}
+
+.form-primary {
+  input[type="checkbox"]:checked,
+  input[type="radio"]:checked::before {
+    background-color: var(--primary) !important;
+  }
+  input:focus,
+  textarea:focus,
+  input[type="checkbox"]:checked,
+  input[type="radio"]:checked {
+    border-color: var(--primary) !important;
+  }
+  &:focus-within {
+    label {
+      color: var(--primary) !important;
+    }
+  }
+}
+
+.form-secondary {
+  input[type="checkbox"]:checked,
+  input[type="radio"]:checked::before {
+    background-color: var(--secondary) !important;
+  }
+  input:focus,
+  textarea:focus,
+  input[type="checkbox"]:checked,
+  input[type="radio"]:checked {
+    border-color: var(--secondary) !important;
+  }
+  &:focus-within {
+    label {
+      color: var(--secondary) !important;
+    }
+  }
+}
+
+.form-tertiary {
+  input[type="checkbox"]:checked,
+  input[type="radio"]:checked::before {
+    background-color: var(--tertiary) !important;
+  }
+  input:focus,
+  textarea:focus,
+  input[type="checkbox"]:checked,
+  input[type="radio"]:checked {
+    border-color: var(--tertiary) !important;
+  }
+  &:focus-within {
+    label {
+      color: var(--tertiary) !important;
+    }
   }
 }
