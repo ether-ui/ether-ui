@@ -33,10 +33,6 @@ jobs:
         with:
           name: docs
           path: docs
-      - shell: bash
-        run: |
-          ls -la
-          cat index.html
       - name: Install SSH Key
         uses: shimataro/ssh-key-action@v2
         with:
