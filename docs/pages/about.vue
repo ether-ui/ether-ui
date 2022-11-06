@@ -1,3 +1,3 @@
 <template>
-  <h1>Docs Wip</h1>
+  hey
 </template>

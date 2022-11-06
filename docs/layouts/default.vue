@@ -1,38 +1,86 @@
 <template>
-  <div class="min-h-screen">
-    <div class="flex min-h-screen">
-      <div class="sidebar p-4 bg-slategray-50">
-        <h6 class="text-slategray-900 font-bold">EtherUI</h6>
-        <p class="text-slategray-500 mb-4">
-          Modern CSS UI Kit
-        </p>
-        <p class="font-bold text-slategray-900">Pages</p>
-        <ul class="list-none m-0 p-0">
-          <li><a href="#" class="text-slategray-500">Home</a></li>
-          <li><a href="#" class="text-slategray-500">About</a></li>
-          <li><a href="#" class="text-slategray-500">Pricing</a></li>
-          <li><a href="#" class="text-slategray-500">Learn</a></li>
-          <li><a href="#" class="text-slategray-500">Contact</a></li>
+  <div class="h-screen">
+    <div class="layout">
+      <div class="sidebar">
+        <h6 class="title">EtherUI Docs</h6>
+        <p class="subtitle">Modern CSS UI Kit</p>
+        <p class="menu-title">Pages</p>
+        <ul>
+          <li>
+            <NuxtLink to="/">
+              <IconDownload />
+              Getting Started
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/about">
+              <IconDownload />
+              About
+            </NuxtLink>
+          </li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Learn</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <p class="menu-title">Pages</p>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Learn</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <p class="menu-title">Pages</p>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Learn</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </div>
-      <div class="grow p-4">
-        <div class=""></div>
+      <div class="header p-4">deki</div>
+      <div class="content">
         <slot />
       </div>
     </div>
   </div>
 </template>
 
-<style>
-@import "../../dist/ether-ui.css";
+<script setup>
+// Import components as usual
+import { IconDownload } from "@iconify-prerendered/vue-fa6-solid";
+</script>
 
-body,
-html,
-#__nuxt {
-  min-height: 100vh;
+<style>
+@import "../../dist/ether-ui.dev.css";
+
+.layout {
+  display: grid;
+  grid-template-columns: 320px calc(100vw - 320px);
+  grid-template-rows: 60px calc(100vh - 60px);
 }
 
 .sidebar {
-  width: 320px;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  overflow-y: auto;
+}
+
+.header {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.content {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  overflow-y: auto;
 }
 </style>

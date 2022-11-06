@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production node ./index.js",
-    "dev": "postcss src/index.pcss -o dist/ether-ui.dev.css -w",
+    "dev": "postcss src/_index.pcss -o dist/ether-ui.dev.css -w",
     "docs:build": "nuxt build",
     "docs:dev": "nuxt dev",
     "docs:generate": "nuxt generate",
@@ -31,7 +31,9 @@
   },
   "homepage": "https://github.com/ether-ui/ether-ui#readme",
   "devDependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@iconify-prerendered/vue-fa-regular": "^0.13.1656181869",
+    "@iconify-prerendered/vue-fa6-brands": "^0.13.1662097805",
+    "@iconify-prerendered/vue-fa6-solid": "^0.13.1662097839",
     "cssnano": "^5.1.13",
     "modern-normalize": "^1.1.0",
     "nuxt": "3.0.0-rc.12",
@@ -43,9 +45,5 @@
     "postcss-math": "^0.0.10",
     "postcss-nested": "^6.0.0",
     "prettier": "2.7.1"
-  },
-  "dependencies": {
-    "@fortawesome/free-regular-svg-icons": "^6.2.0",
-    "@fortawesome/free-solid-svg-icons": "^6.2.0"
   }
 }

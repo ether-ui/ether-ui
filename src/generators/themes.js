@@ -17,9 +17,12 @@ module.exports = function themes(config) {
       --tertiary: var(--${theme["tertiary"]});
       --tertiary-content: var(--${theme["tertiary-content"]});
       --base-0: var(--${theme["base-0"]});
+      --base-50: var(--${theme["base-50"]});
       --base-100: var(--${theme["base-100"]});
       --base-200: var(--${theme["base-200"]});
+      --base-content-light: var(--${theme["base-content-light"]});
       --base-content: var(--${theme["base-content"]});
+      --base-content-heavy: var(--${theme["base-content-heavy"]});
     }
     `;
   }
