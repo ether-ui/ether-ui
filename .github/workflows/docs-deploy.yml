@@ -1,3 +1,5 @@
+name: Build & Deploy Docs
+
 on:
   push:
     branches: [ "main" ]
@@ -32,4 +34,5 @@ jobs:
           name: docs
       - shell: bash
         run: |
-          cat docs/index.html
+          ls -la
+          cat index.html
