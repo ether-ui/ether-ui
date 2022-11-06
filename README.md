@@ -1,5 +1,7 @@
 # Ether UI
 
+[![Build & Deploy Docs](https://github.com/ether-ui/ether-ui/actions/workflows/docs-deploy.yml/badge.svg)](https://github.com/ether-ui/ether-ui/actions/workflows/docs-deploy.yml)
+
 ## Modern CSS UI Kit
 
 #### EtherUI is in active development! Not meant for production yet!
