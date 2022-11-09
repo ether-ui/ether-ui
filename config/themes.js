@@ -14,8 +14,9 @@ const themes = {
     "base-100": "slategray-100",
     "base-200": "slategray-200",
     "base-content-light": "slategray-500",
-    "base-content": "black-800",
+    "base-content": "black-700",
     "base-content-heavy": "black-900",
+    "rounded-radius": "0.25rem",
   },
 };
 

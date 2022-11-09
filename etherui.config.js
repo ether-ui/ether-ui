@@ -9,6 +9,7 @@ const config = {
   breakpoints: breakpoints,
   colors: colors,
   themes: themes,
+  legacyPrefix: false,
 };
 
 module.exports = config;

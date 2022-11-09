@@ -1,8 +1,9 @@
 const postcss = require("postcss");
 const postcssConfig = require("./postcss.config");
 const fs = require("fs");
-const filenames = require("./config/filenames");
+const prefixer = require("postcss-prefixer");
 
+const filenames = require("./config/filenames");
 const config = require("./etherui.config");
 
 const grid = require("./src/generators/grid");
@@ -15,11 +16,21 @@ grid(config);
 colors(config);
 themes(config);
 
+let pcss = fs.readFileSync("./src/_index.pcss");
+let pcssTW = fs.readFileSync("./src/_index.tailwind-compatibility.pcss");
+
+if (config.legacyPrefix) {
+  postcssConfig.plugins.push(prefixer({ prefix: config.legacyPrefix }));
+} else {
+  pcss += "\n" + fs.readFileSync("./src/body-styles.pcss");
+  pcssTW += "\n" + fs.readFileSync("./src/body-styles.pcss");
+}
+
 /**
  * Build Main File
  */
 postcss(postcssConfig.plugins)
-  .process(fs.readFileSync("./src/_index.pcss"), {
+  .process(pcss, {
     from: "./src/_index.pcss",
     to: filenames.min,
   })
@@ -33,7 +44,7 @@ postcss(postcssConfig.plugins)
  * Build Tailwind Compatibility File
  */
 postcss(postcssConfig.plugins)
-  .process(fs.readFileSync("./src/_index.tailwind-compatibility.pcss"), {
+  .process(pcssTW, {
     from: "./src/_index.pcss",
     to: filenames["min-tw-comp"],
   })

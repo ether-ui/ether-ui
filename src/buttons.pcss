@@ -1,4 +1,4 @@
-button.btn {
+.btn {
   padding: 0.5rem 1rem;
   box-shadow: inset 0 0 0px 0px rgba(0, 0, 0, 0);
   cursor: pointer;
@@ -9,6 +9,7 @@ button.btn {
   background: var(--neutral);
   color: var(--neutral-content);
   transition: box-shadow 0.3s;
+  border-radius: var(--rounded-radius);
 
   &.primary {
     background: var(--primary);
@@ -26,11 +27,11 @@ button.btn {
   }
 }
 
-button.btn:not([disabled]):hover {
+.btn:not([disabled]):hover {
   box-shadow: inset 0 0 50px 50px rgba(0, 0, 0, 0.1);
 }
 
-button.btn:after {
+.btn:after {
   content: "";
   position: absolute;
   left: 0;
@@ -41,25 +42,25 @@ button.btn:after {
   transition: border 0.1s;
 }
 
-button.btn.rounded-min:after {
+.btn.rounded-min:after {
   border-radius: 0.25rem;
 }
 
-button.btn.rounded-max:after {
+.btn.rounded-max:after {
   border-radius: 1.5rem;
 }
 
-button.btn:not([disabled]):active:after {
+.btn:not([disabled]):active:after {
   border: inset 0.25rem rgba(0, 0, 0, 0.1);
 }
 
-button.btn[disabled] {
+.btn[disabled] {
   cursor: not-allowed;
   background: var(--gray-400) !important;
   color: var(--gray-800) !important;
 }
 
-button.btn svg {
+.btn svg {
   width: 1.5rem;
   height: 1.5rem;
   margin: 0;
@@ -68,7 +69,12 @@ button.btn svg {
   vertical-align: top;
 }
 
-button.btn-border {
+.btn-border {
   border-style: solid;
   border-width: 1px;
+}
+
+a.btn {
+  display: inline-block;
+  text-align: center;
 }

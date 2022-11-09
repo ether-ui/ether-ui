@@ -10,7 +10,8 @@ module.exports = function grid(config) {
 }
 
 .container {
-    width: 1200px;
+    max-width: 1400px;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
 }
@@ -41,7 +42,9 @@ module.exports = function grid(config) {
 }
 
 .col {
-    flex: 1 0 0;
+    flex: 1 0 0%;
+    max-width: 100%;
+    min-width: 0;
 }
 
 `;
@@ -52,9 +55,11 @@ module.exports = function grid(config) {
       output += `@media (min-width: ${value}px) {\n`;
     }
     for (let i = 1; i < 12; i++) {
+      let calc = ((i / 12) * 100).toFixed(2);
       output += `
 .col-${suffix}${i} {
-    flex: 0 0 ${((i / 12) * 100).toFixed(2)}%;
+    flex: 0 0 ${calc}%;
+    max-width: ${calc}%;
 }
 `;
     }
