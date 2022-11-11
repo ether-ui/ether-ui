@@ -7,7 +7,7 @@
 #### EtherUI is in active development! Not meant for production yet!
 
 EtherUI is a modern CSS UI kit which tries to be very simple and lightweight,
-yet powerful and extendible. 
+yet powerful and extensible. 
 
 The package ships with **no JavaScript** and there are no complicated build steps, 
 using EtherUI in your project is incredibly simple,

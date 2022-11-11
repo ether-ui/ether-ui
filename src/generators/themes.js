@@ -23,6 +23,8 @@ module.exports = function themes(config) {
       --base-content-light: var(--${theme["base-content-light"]});
       --base-content: var(--${theme["base-content"]});
       --base-content-heavy: var(--${theme["base-content-heavy"]});
+      
+      --rounded-radius: ${theme["rounded-radius"]};
     }
     `;
   }
