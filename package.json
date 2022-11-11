@@ -1,8 +1,11 @@
 {
-  "name": "ether-ui",
-  "version": "0.1.0-alpha.0",
+  "name": "@ether-ui/ether-ui",
+  "version": "0.1.0-alpha.1",
   "description": "Modern CSS UI Kit",
   "main": "index.js",
+  "bin": {
+    "etherui": "index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production node ./index.js",
@@ -28,14 +31,9 @@
     "url": "https://www.etherui.com"
   },
   "homepage": "https://github.com/ether-ui/ether-ui#readme",
-  "devDependencies": {
-    "@iconify-prerendered/vue-fa-regular": "^0.13.1656181869",
-    "@iconify-prerendered/vue-fa6-brands": "^0.13.1662097805",
-    "@iconify-prerendered/vue-fa6-solid": "^0.13.1662097839",
+  "dependencies": {
     "cssnano": "^5.1.13",
     "modern-normalize": "^1.1.0",
-    "nuxt": "^2.15.8",
-    "nuxt-highlightjs": "^1.0.3",
     "postcss": "^8.4.17",
     "postcss-cli": "^10.0.0",
     "postcss-cssnext": "^3.1.1",
@@ -45,5 +43,13 @@
     "postcss-nested": "^6.0.0",
     "postcss-prefixer": "^2.1.3",
     "prettier": "2.7.1"
-  }
+  },
+  "devDependencies": {
+    "@iconify-prerendered/vue-fa-regular": "^0.13.1656181869",
+    "@iconify-prerendered/vue-fa6-brands": "^0.13.1662097805",
+    "@iconify-prerendered/vue-fa6-solid": "^0.13.1662097839",
+    "nuxt": "^2.15.8",
+    "nuxt-highlightjs": "^1.0.3"
+  },
+  "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
 }
