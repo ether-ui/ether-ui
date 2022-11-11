@@ -50,5 +50,6 @@
     "@iconify-prerendered/vue-fa6-solid": "^0.13.1662097839",
     "nuxt": "^2.15.8",
     "nuxt-highlightjs": "^1.0.3"
-  }
+  },
+  "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
 }
