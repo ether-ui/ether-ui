@@ -1,6 +1,6 @@
 {
   "name": "@ether-ui/ether-ui",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "description": "Modern CSS UI Kit",
   "main": "index.js",
   "bin": {
