@@ -38,7 +38,7 @@
     <!--      </div>-->
     <!--    </div>-->
     <div class="header mb-4">
-      <div class="container">
+      <div class="container px-4">
         <NuxtLink to="/" class="logo-typo">EtherUI</NuxtLink>
         <ul>
           <li><a href="https://etherui.com">Back to Home</a></li>
@@ -81,7 +81,7 @@
         </ul>
       </div>
     </div>
-    <div class="container layout">
+    <div class="container layout px-4">
       <div class="sidebar-left" :class="{ 'sidebar-left-active': menu }">
         <p class="menu-title font-bold">Getting Started</p>
         <ul class="main-side-menu list-none m-0 p-0">

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const postcss = require("postcss");
 const postcssConfig = require("./postcss.config");
 const fs = require("fs");
