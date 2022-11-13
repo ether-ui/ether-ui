@@ -47,6 +47,7 @@
 &lt;html data-ether-theme="ether-light">
   &lt;head>
     &lt;title>My Awesome App&lt;/title>
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
     &lt;link rel="stylesheet" href="ether-ui.min.css" />
     &lt;link rel="preconnect" href="https://fonts.googleapis.com" />
     &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -80,7 +81,7 @@
           href="https://github.com/ether-ui/ether-ui/blob/main/dist/ether-ui.tw-comp.min.css"
           >ether-ui.tw-comp.min.css</a
         >
-        instead of the original EtherUI file
+        instead of the original EtherUI file.
 
         <h5 class="mt-8 mb-2 font-bold" id="legacy">Legacy Mode</h5>
         EtherUI acknowledges the struggles of real world legacy web apps. Want
@@ -91,7 +92,30 @@
         project's root with the following contents:
         <pre><code v-highlight class="scss" v-html="code[3]"></code></pre>
         Then run
-        <pre><code v-highlight class="bash">npm etherui</code></pre>
+        <pre><code v-highlight class="bash">npx etherui</code></pre>
+        <div class="bg-dodgerblue-50 text-dodgerblue-700 p-4 mb-4">
+          <p class="font-bold mb-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              style="width: 20px; vertical-align: text-bottom"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
+              />
+            </svg>
+
+            Not using node/npm in your legacy project? No problem!
+          </p>
+          You can create a temporary empty project, install EtherUI with npm and
+          continue following this guide. At the end you will receive final CSS
+          files which you can include directly in your HTML
+        </div>
         And you will receive built css files which you should use:
         <pre><code v-highlight class="txt" v-html="code[4]"></code></pre>
 
@@ -128,6 +152,11 @@
 import EPage from "../components/EPage";
 export default {
   components: { EPage },
+  head() {
+    return {
+      title: "Installation - EtherUI",
+    };
+  },
   data() {
     return {
       code: [
@@ -139,8 +168,8 @@ import '@ether-ui/dist/ether-ui.min.css'`,
         `module.exports = {
   legacyPrefix: 'mycss-'
 }`,
-        `./public/ether-ui.min.css
-./public/ether-ui-tw-comp.min.css`,
+        `./dist/ether-ui.min.css
+./dist/ether-ui-tw-comp.min.css`,
       ],
     };
   },

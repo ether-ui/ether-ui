@@ -21,6 +21,10 @@ module.exports = function grid(config) {
     flex-wrap: wrap;
 }
 
+.row > * {
+    width: 100%;
+}
+
 .gap-1 {
     gap: 1rem;
 }
@@ -41,28 +45,39 @@ module.exports = function grid(config) {
     gap: 4rem;
 }
 
-.col {
+`;
+
+  let dimensions = [{ suffix: "", width: "" }];
+  for (const [key, value] of Object.entries(config.breakpoints)) {
+    dimensions.push({ suffix: key, width: value });
+  }
+  for (let i = 0; i < dimensions.length; i++) {
+    let suffix = dimensions[i].suffix ? "-" + dimensions[i].suffix : "";
+
+    if (suffix) {
+      output += `@media (min-width: ${dimensions[i].width}px) {\n`;
+    }
+
+    for (let i = 0; i <= 12; i++) {
+      if (i === 0) {
+        output += `
+.col${suffix} {
     flex: 1 0 0%;
     max-width: 100%;
     min-width: 0;
 }
-
 `;
-
-  for (const [key, value] of Object.entries(config.breakpoints)) {
-    let suffix = key === "xs" ? "" : `${key}-`;
-    if (suffix) {
-      output += `@media (min-width: ${value}px) {\n`;
-    }
-    for (let i = 1; i < 12; i++) {
-      let calc = ((i / 12) * 100).toFixed(2);
-      output += `
-.col-${suffix}${i} {
+      } else {
+        let calc = ((i / 12) * 100).toFixed(2);
+        output += `
+.col${suffix}-${i} {
     flex: 0 0 ${calc}%;
     max-width: ${calc}%;
 }
 `;
+      }
     }
+
     if (suffix) {
       output += `}\n`;
     }
