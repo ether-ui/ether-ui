@@ -122,8 +122,8 @@
 
         When you use one of these files,
         <span class="font-bold">all EtherUI classes</span> will have the
-        <code>ether-</code>
-        Literally all of EtherUI css classes will have that prefix, e.g.
+        <code>ether-</code>.
+        Literally all of EtherUI CSS classes will have that prefix, e.g.
         <code>.ether-row</code>, <code>.ether-col</code> etc. Prefix itself is,
         of course, customizable, you can use any other prefix in your config
         file. <br />

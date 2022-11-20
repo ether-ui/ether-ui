@@ -21,10 +21,28 @@
       </div>
     </div>
     <div class="code-bar">
-      <span class="font-bold" style="font-size: 0.75rem">HTML</span>
+      <span
+        class="font-bold cursor-pointer"
+        style="font-size: 0.75rem"
+        v-if="$slots['code-html'] || variants.length"
+        @click="activeLang = 'HTML'"
+        >HTML</span
+      >
+      <span
+        class="font-bold ml-2 cursor-pointer"
+        style="font-size: 0.75rem"
+        v-if="$slots['code-css']"
+        @click="activeLang = 'CSS'"
+        >CSS</span
+      >
     </div>
-    <slot v-if="!variants.length" name="code-html"></slot>
-    <div v-else>
+    <div v-show="activeLang === 'HTML'">
+      <slot v-if="!variants.length" name="code-html"></slot>
+    </div>
+    <div v-show="activeLang === 'CSS'">
+      <slot v-if="!variants.length" name="code-css"></slot>
+    </div>
+    <div v-if="variants.length">
       <div v-for="variant in variants" v-show="activeVariant === variant">
         <slot :name="'code-html-' + variant"></slot>
       </div>
@@ -47,6 +65,8 @@ export default {
   data() {
     return {
       activeVariant: this.variants.length ? this.variants[0] : null,
+      activeLang:
+        this.$slots["code-html"] || this.variants.length ? "HTML" : "CSS",
     };
   },
 };

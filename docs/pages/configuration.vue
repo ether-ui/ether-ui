@@ -90,6 +90,10 @@ module.exports = {
             <code>.text-mycolor</code> and <code>.text-megagreen</code> CSS
             classes that you can use in your HTML
           </li>
+          <li>
+            <code>.border-mycolor</code> and <code>.border-megagreen</code> CSS
+            classes that you can use in your HTML
+          </li>
         </ul>
         The names of the classes should be self-explanatory. <br />
 

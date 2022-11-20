@@ -18,7 +18,8 @@
       </ul>
     </template>
     <template v-slot:content>
-      <h5 class="mt-8 mb-2 font-bold" id="standard">Standard Input</h5>
+      <h2 class="font-bold mb-2">Form: Input</h2>
+      <h5 class="mt-4 mb-2 font-bold" id="standard">Standard Input</h5>
       <p class="mb-3">
         Input with no color modifiers will not have any hover color changes.
       </p>
@@ -56,7 +57,7 @@
             </div>
           </template>
           <template v-slot:code-html-Primary>
-            <pre><code v-highlight class="HTML">&lt;div class="form-element tertiary">
+            <pre><code v-highlight class="HTML">&lt;div class="form-element primary">
   &lt;label>Label&lt;/label>
   &lt;input placeholder="Type here..." />
   &lt;p>Helper message&lt;/p>
@@ -101,17 +102,17 @@
       <div>
         <code-preview>
           <template v-slot:preview>
-            <div class="form-element tertiary">
-              <label class="text-indigo-400">Label</label>
-              <input placeholder="Type here..." class="border-indigo-400" />
-              <p class="text-indigo-300">Helper message</p>
+            <div class="form-element">
+              <label class="text-carnation-500">Label</label>
+              <input placeholder="Type here..." class="border-carnation-500" />
+              <p class="text-carnation-300">Helper message</p>
             </div>
           </template>
           <template v-slot:code-html>
-            <pre><code v-highlight class="HTML">&lt;div class="form-element tertiary">
-  &lt;label class="text-indigo-400">Label&lt;/label>
-  &lt;input placeholder="Type here..." class="border-indigo-400" />
-  &lt;p class="border-indigo-300">Helper message&lt;/p>
+            <pre><code v-highlight class="HTML">&lt;div class="form-element">
+  &lt;label class="text-carnation-500">Label&lt;/label>
+  &lt;input placeholder="Type here..." class="border-carnation-500" />
+  &lt;p class="text-carnation-300">Helper message&lt;/p>
 &lt;/div></code></pre>
           </template>
         </code-preview>
@@ -122,7 +123,7 @@
           <template v-slot:preview>
             <div class="form-element primary">
               <label>Label</label>
-              <div class="has-icons">
+              <div class="has-icon-left has-icon-right">
                 <svg
                   class="prepend-icon"
                   xmlns="http://www.w3.org/2000/svg"
@@ -157,37 +158,38 @@
           </template>
           <template v-slot:code-html>
             <pre><code v-highlight class="HTML">&lt;div class="form-element primary">
-&lt;label>Label&lt;/label>
-&lt;div class="has-icons">
-  &lt;svg
-      class="prepend-icon"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-  >
-    &lt;path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-    />
-  &lt;/svg>
-  &lt;input placeholder="Enter here..." />
-  &lt;svg
-      class="append-icon cursor-pointer"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-  >
-    &lt;path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-    />
-  &lt;/svg>
+  &lt;label>Label&lt;/label>
+  &lt;div class="has-icon-left has-icon-right">
+    &lt;svg
+        class="prepend-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+    >
+      &lt;path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+      />
+    &lt;/svg>
+    &lt;input placeholder="Enter here..." />
+    &lt;svg
+        class="append-icon cursor-pointer"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+    >
+      &lt;path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+      />
+    &lt;/svg>
+  &lt;/div>
 &lt;/div></code></pre>
           </template>
         </code-preview>
@@ -203,7 +205,7 @@ export default {
   components: { CodePreview, EPage },
   head() {
     return {
-      title: "Form: Inputs - EtherUI",
+      title: "Form: Input - EtherUI",
     };
   },
 };
