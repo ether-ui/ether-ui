@@ -37,6 +37,10 @@
           <code>.text-color-name</code> CSS class that you can use in your HTML
           to set the text color
         </li>
+        <li>
+          <code>.border-color-name</code> CSS class that you can use in your HTML
+          to set the text color
+        </li>
       </ul>
       So, if you are considering color named carnation-400, that means that
       you'll have the following things:
@@ -49,6 +53,9 @@
         </li>
         <li>
           <code>.text-carnation-400</code>
+        </li>
+        <li>
+          <code>.border-carnation-400</code>
         </li>
       </ul>
       <h5 class="mt-8 mb-4 font-bold" id="default-colors">Default Colors</h5>
@@ -76,6 +83,7 @@
                   <p>var(--{{ variant.name }})</p>
                   <p>.bg-{{ variant.name }}</p>
                   <p>.text-{{ variant.name }}</p>
+                  <p>.border-{{ variant.name }}</p>
                   <p class="text-base-content-light">{{ variant.hex }}</p>
                   <p class="text-base-content-light">{{ variant.rgba }}</p>
                 </div>

@@ -151,8 +151,18 @@
         <p class="menu-title font-bold mt-3">Elements</p>
         <ul class="main-side-menu list-none m-0 p-0">
           <li>
-            <NuxtLink to="/form-inputs">
-              Form: Inputs
+            <NuxtLink to="/form-checkbox">
+              Form: Checkbox
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/form-input">
+              Form: Input
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/form-textarea">
+              Form: Textarea
             </NuxtLink>
           </li>
         </ul>
