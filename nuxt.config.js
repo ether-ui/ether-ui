@@ -17,7 +17,7 @@ export default {
     [
       "nuxt-highlightjs",
       {
-        style: "atom-one-dark",
+        style: "atom-one-light",
       },
     ],
   ],

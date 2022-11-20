@@ -5,7 +5,14 @@ module.exports = {
     require("postcss-for"),
     require("postcss-math"),
     require("postcss-math"),
-    require("postcss-cssnext"),
+    require("postcss-cssnext")({
+      features: {
+        customProperties: {
+          preserve: true,
+          warnings: false,
+        },
+      },
+    }),
     ...(process.env.NODE_ENV === "production" ? [require("cssnano")] : []),
   ],
 };

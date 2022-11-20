@@ -49,6 +49,7 @@
     "@iconify-prerendered/vue-fa-regular": "^0.13.1656181869",
     "@iconify-prerendered/vue-fa6-brands": "^0.13.1662097805",
     "@iconify-prerendered/vue-fa6-solid": "^0.13.1662097839",
+    "@stackblitz/sdk": "^1.8.1",
     "nuxt": "^2.15.8",
     "nuxt-highlightjs": "^1.0.3"
   }

@@ -39,7 +39,9 @@
     <!--    </div>-->
     <div class="header mb-4">
       <div class="container px-4">
-        <NuxtLink to="/" class="logo-typo">EtherUI</NuxtLink>
+        <NuxtLink to="/" class="logo-typo">
+          <img src="/logo.svg" alt="EtherUI Logo" style="width: 150px">
+        </NuxtLink>
         <ul>
           <li><a href="https://etherui.com">Back to Home</a></li>
         </ul>
@@ -145,10 +147,15 @@
               Colors
             </NuxtLink>
           </li>
-          <li></li>
-          <li></li>
         </ul>
         <p class="menu-title font-bold mt-3">Elements</p>
+        <ul class="main-side-menu list-none m-0 p-0">
+          <li>
+            <NuxtLink to="/form-inputs">
+              Form: Inputs
+            </NuxtLink>
+          </li>
+        </ul>
       </div>
       <div class="content">
         <slot name="content"></slot>
@@ -178,20 +185,20 @@ export default {
 </script>
 
 <style>
-hr {
-  border-top: 1px solid var(--slategray-300);
-}
+@import "../../dist/ether-ui.min.css";
 
 .hljs {
   border-radius: 10px;
+  background: var(--gray-50) !important;
+  border: 1px solid var(--slategray-100);
 }
 
 code {
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  background: #282c34;
-  color: #abb2bf;
+  background: var(--gray-50) !important;
+  border: 1px solid var(--slategray-100);
   padding: 2px 6px;
   font-family: ui-monospace, SFMono-Regular, Consolas, Liberation Mono, Menlo,
     monospace;

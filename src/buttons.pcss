@@ -25,6 +25,29 @@
     background: var(--tertiary);
     color: var(--tertiary-content);
   }
+
+  &.primary-inverted {
+    color: var(--primary);
+    background: var(--primary-content);
+    border: 1px solid var(--primary);
+  }
+
+  &.secondary-inverted {
+    color: var(--secondary);
+    background: var(--secondary-content);
+    border: 1px solid var(--primary);
+  }
+
+  &.tertiary-inverted {
+    color: var(--tertiary);
+    background: var(--tertiary-content);
+    border: 1px solid var(--primary);
+  }
+
+  &.small {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
 }
 
 .btn:not([disabled]):hover {
@@ -51,7 +74,7 @@
 }
 
 .btn:not([disabled]):active:after {
-  border: inset 0.25rem rgba(0, 0, 0, 0.1);
+  border: inset 0.25rem rgba(0, 0, 0, 0.2);
 }
 
 .btn[disabled] {

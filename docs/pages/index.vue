@@ -19,6 +19,7 @@
     </template>
     <template v-slot:content>
       <div>
+        <div id="peki"></div>
         <h2 class="font-bold mb-2" id="installation">Installation</h2>
         <p class="text-slategray-600" style="font-size: 1.25rem">
           EtherUI is a modern CSS UI kit which tries to be very simple and
@@ -173,5 +174,7 @@ import '@ether-ui/dist/ether-ui.min.css'`,
       ],
     };
   },
+  mounted() {
+  }
 };
 </script>
