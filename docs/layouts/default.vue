@@ -9,5 +9,4 @@ export default {
 </script>
 
 <style>
-@import "../../dist/ether-ui.min.css";
 </style>
